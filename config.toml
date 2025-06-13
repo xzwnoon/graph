@@ -1,0 +1,23 @@
+[llm]
+model = "deepseek-chat"
+api_key = "sk-0bb6e4dae7ed44b58a8585b363c95dfb"  # 替换为实际的DeepSeek API key
+base_url = "https://api.deepseek.com/v1"  # DeepSeek API endpoint
+max_tokens = 8192
+temperature = 0.5
+
+[chunking]
+chunk_size = 200  # Number of words per chunk
+overlap = 20     # Number of words to overlap between chunks
+
+[standardization]
+enabled = true             # Whether to enable entity standardization
+use_llm_for_entities = true  # Whether to use LLM for additional entity resolution
+
+[inference]
+enabled = false             # Whether to enable relationship inference
+use_llm_for_inference = false  # Whether to use LLM for relationship inference
+apply_transitive = false    # Whether to apply transitive inference rules
+
+[visualization]
+edge_smooth = false  # Options: false, "dynamic", "continuous", "discrete", "diagonalCross", 
+                         # "straightCross", "horizontal", "vertical", "curvedCW", "curvedCCW", "cubicBezier": true = "continuous"
